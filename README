@@ -25,7 +25,7 @@ That is an ambitious question.
 Reimplementing decades of existing hardware support first would be
 wasteful. linux-zinux therefore provides a bridge to the existing world.
 
-```text
+```
                     ZINUX
                       │
           ┌───────────┴───────────┐
