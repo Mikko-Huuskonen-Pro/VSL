@@ -40,7 +40,7 @@ wasteful. linux-zinux therefore provides a bridge to the existing world.
                  Zinux system
 
 
-
+```
 
 ## What is linux-zinux?
 
