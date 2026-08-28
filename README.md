@@ -145,5 +145,5 @@ copyright information.
 
 Zinux is an experimental AI-native operating system project focused on
 the future of dynamically constructed, capability-constrained hardware
-interfaces.
+interfaces. https://github.com/Mikko-Huuskonen-Pro/Zinux
 
