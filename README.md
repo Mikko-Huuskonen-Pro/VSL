@@ -1,0 +1,40 @@
+# linux-zinux
+
+### The hardware compatibility layer of Zinux
+
+linux-zinux is a Linux fork maintained as part of the Zinux project.
+
+Its purpose is simple:
+
+> **Do not throw away decades of working hardware support.**
+
+Linux contains decades of practical knowledge about real hardware:
+drivers, protocols, firmware, hardware quirks and workarounds.
+
+Zinux intends to stand on those shoulders.
+
+### Why?
+
+Zinux explores a different model of hardware support:
+
+> **Can local AI construct a hardware-specific driver when it is needed,
+> instead of requiring every possible driver to be permanently maintained?**
+
+That is an ambitious question.
+
+Reimplementing decades of existing hardware support first would be
+wasteful. linux-zinux therefore provides a bridge to the existing world.
+
+```text
+                    ZINUX
+                      │
+          ┌───────────┴───────────┐
+          │                       │
+   Existing hardware        New hardware
+          │                       │
+    linux-zinux drivers      AI-generated
+                              Zig drivers
+          │                       │
+          └───────────┬───────────┘
+                      │
+                 Zinux system
