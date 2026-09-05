@@ -6,28 +6,29 @@ VSL is the Linux compatibility environment for [VÄINÖ](https://github.com/Mikk
 
 VSL is inspired by the idea behind WSL2: provide a complete Linux environment that integrates with another operating system and makes the Linux command-line ecosystem available to users.
 
-But ZSL takes the concept in a different direction:
+But VSL takes the concept in a different direction:
 
-Everything in Zinux is a plugin.
+Everything in Väinö is a plugin.
 
-Linux is not the core of Zinux.
+Linux is not the core of Väinö.
 
-Linux is one environment Zinux can run.
+Linux is one environment Väinö can run.
 
-⸻
+---
 
 ## Architecture
+
 ```
-                         ZINUX
+                         VÄINÖ
                            │
                   ┌────────┴────────┐
                   │                 │
-              Zinux Core       Plugin Runtime
+              Väinö Core       Plugin Runtime
                   │                 │
                   ├─────────────────┤
                   │
                   ▼
-                 ZSL
+                 VSL
                   │
                   ▼
           Linux environment
@@ -37,15 +38,17 @@ Linux is one environment Zinux can run.
       shell      git      Python
       ssh       tools    compilers
 ```
-ZSL provides access to the existing Linux ecosystem without making Linux itself the definition of Zinux.
 
-⸻
+VSL provides access to the existing Linux ecosystem without making Linux itself the definition of Väinö.
+
+---
 
 ## Snapshot & Recovery
 
-ZSL is designed to be a recoverable plugin.
+VSL is designed to be a recoverable plugin.
 
-Zinux can create snapshots of a plugin’s state before potentially destructive operations.
+Väinö can create snapshots of a plugin’s state before potentially destructive operations.
+
 ```
 AI / User
     │
@@ -53,13 +56,13 @@ AI / User
  Request change
     │
     ▼
-Zinux policy
+Väinö policy
     │
     ▼
   SNAPSHOT
     │
     ▼
-    ZSL
+    VSL
     │
     ▼
 Linux environment
@@ -74,75 +77,78 @@ Linux environment
              ▼
        known-good state
 ```
-The snapshot mechanism belongs to Zinux Core, not to Linux.
 
-This allows Zinux to treat complex environments such as ZSL as isolated, recoverable components.
+The snapshot mechanism belongs to Väinö Core, not to Linux.
+
+This allows Väinö to treat complex environments such as VSL as isolated, recoverable components.
 
 The long-term goal is to make plugin operations transactional:
 
-Experiment → Validate → Commit or Rollback
+**Experiment → Validate → Commit or Rollback**
 
 This becomes especially important when AI-generated code or drivers are involved.
 
-⸻
+---
 
 ## Why Linux?
 
 Linux represents more than 35 years of development, hardware support, drivers, tooling, and software.
 
-Zinux does not need to reproduce all of that work.
+Väinö does not need to reproduce all of that work.
 
-Instead, ZSL provides a bridge to the existing world:
+Instead, VSL provides a bridge to the existing world:
 
-* Linux command-line tools
-* development environments
-* compilers and interpreters
-* networking tools
-* system utilities
-* existing Linux applications
-* decades of Linux hardware support
+- Linux command-line tools
+- Development environments
+- Compilers and interpreters
+- Networking tools
+- System utilities
+- Existing Linux applications
+- Decades of Linux hardware support
 
 The goal is not to replace Linux.
 
 The goal is to make Linux one useful component inside a different operating-system architecture.
 
-⸻
+---
 
-## Native Zinux and ZSL
+## Native Väinö and VSL
 
-ZSL can coexist with native Zinux implementations.
+VSL can coexist with native Väinö implementations.
 
-Native Zinux
+**Native Väinö**
 ```
 Hardware
    ↓
-Zinux
+Väinö
    ↓
 Native driver
    ↓
-Zinux capabilities
+Väinö capabilities
 ```
-ZSL
+
+**VSL**
 ```
 Hardware
    ↓
-Zinux
+Väinö
    ↓
-ZSL
+VSL
    ↓
 Linux
    ↓
 Linux driver
 ```
-A device could initially be supported through Linux and later receive a native Zinux driver.
 
-This allows Zinux to experiment with new driver architectures without abandoning existing hardware support.
+A device could initially be supported through Linux and later receive a native Väinö driver.
 
-⸻
+This allows Väinö to experiment with new driver architectures without abandoning existing hardware support.
+
+---
 
 ## AI-Native Architecture
 
-Zinux is exploring an operating system where AI can help create drivers and system functionality.
+Väinö is exploring an operating system where AI can help create drivers and system functionality.
 
 The AI does not receive unrestricted access to the system.
 
@@ -154,7 +160,7 @@ AI
 Plan
  │
  ▼
-Zinux Policy
+Väinö Policy
  │
  ▼
 Capabilities
@@ -169,87 +175,88 @@ Validate
  │
  └── FAIL → Rollback
 ```
-ZSL provides a practical and familiar environment while this architecture develops.
+
+VSL provides a practical and familiar environment while this architecture develops.
 
 Snapshot and recovery are therefore not merely convenience features.
 
 They are part of the trust model:
 
-The AI may experiment, but Zinux remains in control.
+**The AI may experiment, but Väinö remains in control.**
 
-⸻
+---
 
-### ZSL Is
+### VSL Is
 
-* A Zinux plugin
-* A Linux compatibility environment
-* A command-line environment
-* A bridge to the existing Linux ecosystem
-* An isolated and recoverable environment
-* A foundation for experimenting with Zinux’s AI-native architecture
+- A Väinö plugin
+- A Linux compatibility environment
+- A command-line environment
+- A bridge to the existing Linux ecosystem
+- An isolated and recoverable environment
+- A foundation for experimenting with Väinö’s AI-native architecture
 
-### ZSL Is Not
+### VSL Is Not
 
-* The Zinux kernel
-* The Zinux operating system itself
-* A Linux distribution renamed as Zinux
-* A replacement for native Zinux drivers
-* Unrestricted access to the Zinux host
+- The Väinö kernel
+- The Väinö operating system itself
+- A Linux distribution renamed as Väinö
+- A replacement for native Väinö drivers
+- Unrestricted access to the Väinö host
 
-⸻
+---
 
 ## Relationship to Linux
 
-ZSL should remain as close to upstream Linux as practical.
+VSL should remain as close to upstream Linux as practical.
 
 The project should:
 
 1. Reuse upstream Linux work.
 2. Minimize unnecessary modifications.
-3. Keep Zinux-specific integration isolated.
-4. Keep Linux complexity outside the Zinux core.
-5. Use Linux as a compatibility layer rather than making it the foundation of Zinux.
+3. Keep Väinö-specific integration isolated.
+4. Keep Linux complexity outside the Väinö core.
+5. Use Linux as a compatibility layer rather than making it the foundation of Väinö.
 
-Zinux owns the architecture.
-ZSL integrates Linux into it.
+**Väinö owns the architecture.**
+**VSL integrates Linux into it.**
 
-⸻
-
+---
 ## Long-Term Vision
 
-ZSL is one part of the larger Zinux experiment.
+VSL is one part of the larger Väinö experiment.
+
 ```
-                         ZINUX
+                         VÄINÖ
                            │
              ┌─────────────┴─────────────┐
              │                           │
         Existing world              New world
              │                           │
-            ZSL                    Native Zinux
+            VSL                    Native Väinö
              │                           │
            Linux                 AI-generated
          ecosystem                  drivers
              │                           │
              └─────────────┬─────────────┘
                            │
-                    Zinux capabilities
+                    Väinö capabilities
                            │
                     Snapshot / Recovery
 ```
+
 The goal is not to build another Linux distribution.
 
 The goal is to explore an operating system where functionality is modular, isolated, capability-controlled, AI-assisted, and recoverable.
 
-Linux gives Zinux access to the world that already exists.
-Zinux provides a framework for exploring what comes next.
+Linux gives Väinö access to the world that already exists.
+Väinö provides a framework for exploring what comes next.
 
-⸻
-
+---
 ## Status
 
-ZSL is an experimental component of the Zinux project.
+VSL is an experimental component of the Väinö project.
 
-The interfaces, isolation model, snapshot mechanism, and Linux integration will evolve together with the Zinux core.
+The interfaces, isolation model, snapshot mechanism, and Linux integration will evolve together with the Väinö core.
 
-Everything is a plugin.
-ZSL is Linux as a plugin.
+**Everything is a plugin.**
+**VSL is Linux as a plugin.**
