@@ -2,7 +2,7 @@
 
 ## Linux as a plugin. Not Linux as the operating system.
 
-ZSL is the Linux compatibility environment for Zinux. https://github.com/Mikko-Huuskonen-Pro/Zinux
+ZSL is the Linux compatibility environment for Zinux: https://github.com/Mikko-Huuskonen-Pro/Zinux
 
 ZSL is inspired by the idea behind WSL2: provide a complete Linux environment that integrates with another operating system and makes the Linux command-line ecosystem available to users.
 
