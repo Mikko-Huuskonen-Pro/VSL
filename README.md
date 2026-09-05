@@ -4,7 +4,7 @@
 
 VSL is the Linux compatibility environment for [VÄINÖ](https://github.com/Mikko-Huuskonen-Pro/V-in-/blob/main)
 
-ZSL is inspired by the idea behind WSL2: provide a complete Linux environment that integrates with another operating system and makes the Linux command-line ecosystem available to users.
+VSL is inspired by the idea behind WSL2: provide a complete Linux environment that integrates with another operating system and makes the Linux command-line ecosystem available to users.
 
 But ZSL takes the concept in a different direction:
 
