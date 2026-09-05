@@ -2,7 +2,7 @@
 
 ## Linux as a plugin. Not Linux as the operating system.
 
-VSL is the Linux compatibility environment for Väinö: (https://github.com/Mikko-Huuskonen-Pro/V-in-/blob/main/README.md)
+VSL is the Linux compatibility environment for Väinö [https://github.com/Mikko-Huuskonen-Pro/V-in-/blob/main]
 
 ZSL is inspired by the idea behind WSL2: provide a complete Linux environment that integrates with another operating system and makes the Linux command-line ecosystem available to users.
 
