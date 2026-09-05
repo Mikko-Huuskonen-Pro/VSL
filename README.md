@@ -16,7 +16,7 @@ Linux is one environment Zinux can run.
 
 ⸻
 
-Architecture
+## Architecture
 ```
                          ZINUX
                            │
@@ -41,7 +41,7 @@ ZSL provides access to the existing Linux ecosystem without making Linux itself 
 
 ⸻
 
-Snapshot & Recovery
+## Snapshot & Recovery
 
 ZSL is designed to be a recoverable plugin.
 
@@ -93,7 +93,7 @@ Linux represents more than 35 years of development, hardware support, drivers, t
 Zinux does not need to reproduce all of that work.
 
 Instead, ZSL provides a bridge to the existing world:
-```
+
 * Linux command-line tools
 * development environments
 * compilers and interpreters
@@ -101,14 +101,14 @@ Instead, ZSL provides a bridge to the existing world:
 * system utilities
 * existing Linux applications
 * decades of Linux hardware support
-```
+
 The goal is not to replace Linux.
 
 The goal is to make Linux one useful component inside a different operating-system architecture.
 
 ⸻
 
-Native Zinux and ZSL
+## Native Zinux and ZSL
 
 ZSL can coexist with native Zinux implementations.
 
@@ -140,7 +140,7 @@ This allows Zinux to experiment with new driver architectures without abandoning
 
 ⸻
 
-AI-Native Architecture
+## AI-Native Architecture
 
 Zinux is exploring an operating system where AI can help create drivers and system functionality.
 
@@ -215,7 +215,7 @@ ZSL integrates Linux into it.
 
 ⸻
 
-Long-Term Vision
+## Long-Term Vision
 
 ZSL is one part of the larger Zinux experiment.
 ```
