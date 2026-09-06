@@ -43,7 +43,7 @@ VSL provides access to the existing Linux ecosystem without making Linux itself 
 
 ---
 
-## Snapshot & Recovery
+## Snapshot & Recovery (aka prince of persia)
 
 VSL is designed to be a recoverable plugin.
 
